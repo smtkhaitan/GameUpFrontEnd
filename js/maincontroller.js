@@ -40,9 +40,9 @@ var app=angular.module('myApp', []);
     };
 
     function showPosition(position) {
-        $scope.latitude = position.coords.latitude;
-        $scope.longitude = position.coords.longitude;
-        if($scope.latitude !== null) {
+        $scope.can.latitude = position.coords.latitude;
+        $scope.can.longitude = position.coords.longitude;
+        if($scope.can.latitude !== null) {
             $scope.allowLogin = true;
         }
     }
@@ -52,21 +52,14 @@ var app=angular.module('myApp', []);
             return;
         }
         else {
-
-        }
-
-    }
-
-        $scope.logInCandidate = function () {
-            $scope.can.latitude = "123";
-            $scope.can.longitude = "123";
             var url = 'http://10.177.7.29:8083/v1/gameUp/login', data = $scope.can, config = 'JSON';
             $http.post(url, data, config).then(function (response) {
                 console.log("ghar challo = " + JSON.stringify(response.data));
-                // $window.location.href = '/GameUpFrontEnd/maps.html';
+                $window.location.href = 'HackathonDashboard/coreui-free-bootstrap-admin-template/src/index.html';
             }, function (response) {
                 console.log("chud gya = " + JSON.stringify(response.data));
             });
-            console.log("Can = " + JSON.stringify($scope.can));
         }
+
+    }
     });
