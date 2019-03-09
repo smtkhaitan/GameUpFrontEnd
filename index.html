@@ -35,7 +35,6 @@
 </head>
 
 <body ng-controller="maincontroller">
-<div>{{name}}</div>
 
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -324,18 +323,18 @@
 
                                 <div class="card-body">
                                     <h2 class="title">Sign up</h2>
-                                    <form method="POST">
+                                    <div> <!--form-->
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" required placeholder="Name" name="name">
+                                            <input ng-model="candidate.name" class="input--style-3" type="text" required placeholder="Name" name="name">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3 js-datepicker" required type="text"
-                                                   placeholder="Birthdate" name="birthday">
+                                            <input ng-model="candidate.dateofb" class="input--style-3 js-datepicker" required type="text"
+                                                   placeholder="Birthdate" name="candidate.dateofb">
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search" required>
-                                                <select name="gender" ng-required="true">
+                                                <select name="gender">
                                                     <option disabled="disabled" selected="selected">Gender</option>
                                                     <option value="male">Male</option>
                                                     <option value="female">Female</option>
@@ -344,8 +343,8 @@
                                                 <div class="select-dropdown"></div>
                                             </div>
                                         </div>
-                                        <div class="input-group" required>
-                                            <select id="indoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
+                                        <div class="input-group">
+                                            <select ng-model="candidate.indoor" id="indoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
                                                 <option value="badminton">Badminton</option>
                                                 <option value="chess">Chess</option>
                                                 <option value="table tennis">Table Tennis</option>
@@ -353,7 +352,7 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <select id="outdoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
+                                            <select ng-model="candidate.outdoor" id="outdoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
                                                 <option value="football">Football</option>
                                                 <option value="cricket">Crcicket</option>
                                                 <option value="basketball">Basketball</option>
@@ -361,21 +360,21 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="email" required placeholder="Email" name="email">
+                                            <input ng-model="candidate.email" class="input--style-3" type="email" required placeholder="Email" name="email">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" required placeholder="Phone" name="phone">
+                                            <input ng-model="candidate.phone" class="input--style-3" type="text" required placeholder="Phone" name="phone">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" required placeholder="Password" name="passsword">
+                                            <input ng-model="candidate.password" class="input--style-3" type="text" required placeholder="Password" name="passsword">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" required  placeholder="Confirm Password" name="confirm-passsword">
+                                            <input ng-model="confirmPassword" class="input--style-3" type="text" required  placeholder="Confirm Password" name="confirm-passsword">
                                         </div>
                                         <div class="p-t-10 pl141">
-                                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                                            <button class="btn btn--pill btn--green" ng-click="signUpCandidate()">Submit</button>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
