@@ -530,3 +530,8 @@ input {
 .test {
   opacity: 0.5;
 }
+
+.embedd-buttons {
+  margin-top: 10px;
+  margin-left: 200px;
+}
