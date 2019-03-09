@@ -1,5 +1,5 @@
 <!Doctype html>
-<html lang="en">
+<html lang="en" ng-app = "myApp">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,9 +34,7 @@
 
 </head>
 
-<body>
-
-
+<body ng-controller="maincontroller">
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">GAME UP!</a>
@@ -103,14 +101,14 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="float-right">
                                     <div class="">
-                                        <button class="btn btn-lg btn--pill btn--green mr120 mr120" data-toggle="modal"
+                                        <button class="btn btn-lg btn--pill btn--green mr120" data-toggle="modal"
                                                 data-target="#Login" type="submit">Login
                                         </button>
                                     </div>
                                     <br>
 
                                     <div class="">
-                                        <button class="btn btn-lg btn--pill btn--green mr120 mr120" data-toggle="modal"
+                                        <button class="btn btn-lg btn--pill btn--green mr120" data-toggle="modal"
                                                 data-target="#Signup" type="submit">Sign up
                                         </button>
                                     </div>
@@ -326,16 +324,16 @@
                                     <h2 class="title">Sign up</h2>
                                     <form method="POST">
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                                            <input class="input--style-3" type="text" required placeholder="Name" name="name">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3 js-datepicker" type="text"
+                                            <input class="input--style-3 js-datepicker" required type="text"
                                                    placeholder="Birthdate" name="birthday">
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                         <div class="input-group">
-                                            <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="gender">
+                                            <div class="rs-select2 js-select-simple select--no-search" required>
+                                                <select name="gender" ng-required="true">
                                                     <option disabled="disabled" selected="selected">Gender</option>
                                                     <option value="male">Male</option>
                                                     <option value="female">Female</option>
@@ -344,8 +342,8 @@
                                                 <div class="select-dropdown"></div>
                                             </div>
                                         </div>
-                                        <div class="input-group">
-                                            <select id="indoor-game" multiple="multiple" style="width: 100%;">
+                                        <div class="input-group" required>
+                                            <select id="indoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
                                                 <option value="badminton">Badminton</option>
                                                 <option value="chess">Chess</option>
                                                 <option value="table tennis">Table Tennis</option>
@@ -353,7 +351,7 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <select id="outdoor-game" multiple="multiple" style="width: 100%;">
+                                            <select id="outdoor-game" multiple="multiple" ng-required="true" style="width: 100%;">
                                                 <option value="football">Football</option>
                                                 <option value="cricket">Crcicket</option>
                                                 <option value="basketball">Basketball</option>
@@ -361,18 +359,18 @@
                                             </select>
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                                            <input class="input--style-3" type="email" required placeholder="Email" name="email">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                                            <input class="input--style-3" type="text" required placeholder="Phone" name="phone">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Password" name="passsword">
+                                            <input class="input--style-3" type="text" required placeholder="Password" name="passsword">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Confirm Password" name="confirm-passsword">
+                                            <input class="input--style-3" type="text" required  placeholder="Confirm Password" name="confirm-passsword">
                                         </div>
-                                        <div class="p-t-10">
+                                        <div class="p-t-10 pl141">
                                             <button class="btn btn--pill btn--green" type="submit">Submit</button>
                                         </div>
                                     </form>
@@ -534,16 +532,19 @@
 <!-- End of Modal -->
 </body>
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+<script src="vendor/jquery/jquery.min.js"></script>  
+<script src="js/angular.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 <script src="js/global.js"></script>
-<script src="js/angular.js"></script>
-<!--<script src="vendor/jquery/jquery.min.js"></script>-->
+
+
 <!-- Vendor JS-->
 <script src="vendor/select2/select2.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>-->
@@ -551,5 +552,6 @@
 <script src="vendor/datepicker/daterangepicker.js"></script>
 
 <!-- Main JS-->
-<script src="js/global.js"></script>
+<!--<script src="js/global.js"></script>-->
+<script src="js/maincontroller.js"></script>
 </html>
