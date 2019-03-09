@@ -71,6 +71,10 @@
         placeholder: 'Indoor games'
     });
 
+    $('#outdoor-game').select2({
+        placeholder: 'Outdoor games'
+    });
+
     
 
 })(jQuery);
