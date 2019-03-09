@@ -35,54 +35,6 @@
 
 <body ng-controller="maincontroller">
 
-<<<<<<< HEAD
-                  <div class="">
-                  <div class="p-t-10">
-                      <button class="btn btn-lg btn--pill btn--green" data-toggle="modal" data-target="#Signup" type="submit">Sign up</button>
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-
-          <div class="carousel-item">
-            <img class="d-block w-100 test" src="images/pic-8.jpg" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="">
-              <div class="p-t-10">
-                        <button class="btn btn-lg btn--pill btn--green" data-toggle="modal" data-target="#Login" type="submit">Login </button>
-                  </div>
-                </div>
-
-                  <div class="">
-                  
-                      <div class="p-t-10">
-                      <button class="btn btn-lg btn--pill btn--green" data-toggle="modal" data-target="#Signup" type="submit">Sign up</button>
-                      </div>
-                  
-                </div>
-          
-              </div>
-          </div>
-
-          <div class="carousel-item">
-            <img class="d-block w-100 test" src="images/pic-9.jpg" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-                <div class="">
-              <div class="p-t-10 sideways">
-                        <button class="btn btn-lg btn--pill btn--green" data-toggle="modal" data-target="#Login" type="submit">Login </button>
-                  </div>
-                </div>
-
-                  <div class="">
-                  <div class="p-t-10">
-                      <button class="btn btn-lg btn--pill btn--green" data-toggle="modal" data-target="#Signup" type="submit">Sign up</button>
-                  </div>
-                </div>
-          
-              </div>
-          </div>
-=======
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">GAME UP!</a>
@@ -90,7 +42,6 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
->>>>>>> 96483ab1d8aaeb89c4371fe44d175cd875bcf6d7
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -401,34 +352,34 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body ">
-                    <div class=""> <!--page-wrapper bg-gra-01 p-t-180 p-b-100-->
-                        <div class=""> <!--wrapper wrapper&#45;&#45;w780-->
+                    <div class="">
+                        <div class="">
                             <div class="card card-3">
 
                                 <div class="card-body">
                                     <h2 class="title">Login</h2>
-                                    <form method="POST">
-
-                                        <div class="input-group">
-                                            <input class="input--style-3" type="email" placeholder="Email" name="email">
-                                        </div>
-                                        <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Password"
-                                                   name="password" type="password">
-                                        </div>
-                                        <div class="p-t-10 pl141">
-                                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
-                                        </div>
-                                    </form>
+                                    <div class="input-group">
+                                        <input ng-model="can.email" class="input--style-3" type="email" placeholder="Email" name="email">
+                                    </div>
+                                    <div class="input-group">
+                                        <input ng-model="can.password" class="input--style-3" type="text" placeholder="Password"
+                                               name="password" type="password">
+                                    </div>
+                                    <div class="p-t-10 pl141">
+                                        <button class="btn btn--pill btn--green" ng-click="geoLocation()">Allow Access</button> <br> <br>
+                                        <button class="btn btn--pill btn--green" ng-click="logInCandidate()">Log In</button> <br> <br>
+                                        <div style="color: red" ng-if="!allowLogin">Allow location services for a match</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
+</div>
 </div>
 </body>
 
@@ -449,5 +400,5 @@
 
 <!-- Main JS-->
 <script src="js/maincontroller.js"></script>
-<script src="js/global.js"></script> 
+<script src="js/global.js"></script>
 </html>
