@@ -65,6 +65,12 @@
     } catch (err) {
         console.log(err);
     }
+
+
+    $('#indoor-game').select2({
+        placeholder: 'Indoor games'
+    });
+
     
 
 })(jQuery);
