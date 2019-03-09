@@ -249,8 +249,12 @@
   background: transparent;
   border: none;
   outline: 0;
+  width: 100% !important;
   box-shadow: none;
-  -webkit-appearance: textfield; }
+  -webkit-appearance: textfield;
+  font-size: 16px;
+  font-weight: bold;
+}
 
 .select2-container--default .select2-results > .select2-results__options {
   max-height: 200px;
