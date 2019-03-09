@@ -401,25 +401,25 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body ">
-                    <div class=""> <!--page-wrapper bg-gra-01 p-t-180 p-b-100-->
-                        <div class=""> <!--wrapper wrapper&#45;&#45;w780-->
+                    <div class="">
+                        <div class="">
                             <div class="card card-3">
 
                                 <div class="card-body">
                                     <h2 class="title">Login</h2>
-                                    <form method="POST">
-
                                         <div class="input-group">
-                                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                                            <input ng-model="can.email" class="input--style-3" type="email" placeholder="Email" name="email">
                                         </div>
                                         <div class="input-group">
-                                            <input class="input--style-3" type="text" placeholder="Password"
+                                            <input ng-model="can.password" class="input--style-3" type="text" placeholder="Password"
                                                    name="password" type="password">
                                         </div>
                                         <div class="p-t-10 pl141">
-                                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                                            <button class="btn btn--pill btn--green" ng-click="geoLocation()">Allow Access</button> <br> <br>
+                                            <button class="btn btn--pill btn--green" ng-click="logInCandidate()">Log In</button> <br> <br>
+                                            <div style="color: red" ng-if="!allowLogin">Allow location services for a match</div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
