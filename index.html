@@ -1,5 +1,5 @@
 <!Doctype html>
-<html lang="en" ng-app = "myApp">
+<html lang="en" ng-app ="myApp">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -35,6 +35,8 @@
 </head>
 
 <body ng-controller="maincontroller">
+<div>{{name}}</div>
+
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">GAME UP!</a>
@@ -536,15 +538,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-<script src="vendor/jquery/jquery.min.js"></script>  
-<script src="js/angular.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-<script src="js/global.js"></script>
-
-
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/angular.js"></script>
 <!-- Vendor JS-->
 <script src="vendor/select2/select2.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>-->
@@ -552,6 +551,6 @@
 <script src="vendor/datepicker/daterangepicker.js"></script>
 
 <!-- Main JS-->
-<!--<script src="js/global.js"></script>-->
 <script src="js/maincontroller.js"></script>
+<script src="js/global.js"></script> 
 </html>
