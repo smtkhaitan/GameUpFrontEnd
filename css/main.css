@@ -180,8 +180,27 @@ h6 {
 /* ==========================================================================
    #SPACING
    ========================================================================== */
-.p-t-100 {
-  padding-top: 100px;
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.mr120 {
+  margin-right: -120px
+}
+
+.pl141 {
+  padding-left: 141px;
+}
+
+.ui.fluid.dropdown {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.float-right {
+  float: right;
+  margin-bottom: 500px;
 }
 
 .p-t-180 {
@@ -190,10 +209,6 @@ h6 {
 
 .p-t-20 {
   padding-top: 20px;
-}
-
-.p-t-10 {
-  padding-top: 10px;
 }
 
 .p-t-30 {
